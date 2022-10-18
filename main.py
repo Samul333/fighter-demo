@@ -3,6 +3,8 @@ import pygame
 from fighter import Fighter
 from pygame import mixer
 
+from loaders.load_knight import load_knight
+
 
 pygame.mixer.init()
 pygame.init()
@@ -23,7 +25,7 @@ WHITE=(255,255,255)
 def main_game():
         
     screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
-
+    load_knight()
     pygame.display.set_caption("Brawllar")
 
     bg_image = pygame.image.load("assets/images/background/bg4.jpg").convert_alpha()
